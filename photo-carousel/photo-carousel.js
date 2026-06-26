@@ -25,11 +25,23 @@
     function showSlide(index) {
       currentIndex = normalizeIndex(index);
 
+      const previousIndex = slides.length > 2 ? normalizeIndex(currentIndex - 1) : -1;
+      const nextIndex = slides.length > 1 ? normalizeIndex(currentIndex + 1) : -1;
+
       slides.forEach(function (slide, slideIndex) {
         const isCurrent = slideIndex === currentIndex;
+        const isPrevious = slideIndex === previousIndex;
+        const isNext = slideIndex === nextIndex;
+        const position = isCurrent ? "current" : isPrevious ? "previous" : isNext ? "next" : "";
 
-        slide.hidden = !isCurrent;
+        slide.hidden = !position;
         slide.setAttribute("aria-hidden", String(!isCurrent));
+
+        if (position) {
+          slide.setAttribute("data-uwg-photo-carousel-position", position);
+        } else {
+          slide.removeAttribute("data-uwg-photo-carousel-position");
+        }
       });
 
       dots.forEach(function (dot, dotIndex) {
