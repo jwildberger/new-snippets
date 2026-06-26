@@ -13,7 +13,8 @@ This snippet lets editors build an accessible image carousel from a hidden autho
 
 ## Transform Behavior
 
-`transform.xsl` replaces the table with a `<section class="uwg-c-photo-carousel">` component that matches the shipped CSS and JS. It also removes the WYSIWYG spacer heading immediately following the snippet table.
+`omni-fragment.xsl` contains the production snippet templates, including the header/footer asset collection modes for the carousel CSS and JS.
 
-The output includes previous/next buttons, live slide status text, and dot buttons for direct slide navigation.
+`transform.xsl` is a standalone local test harness. It replaces the table with a `<section class="uwg-c-photo-carousel">` component that matches the shipped CSS and JS. It also removes the WYSIWYG spacer heading immediately following the snippet table.
 
+The output includes previous/next buttons, screen-reader button labels, live slide status text, lazy loading after the first slide, and dot buttons for direct slide navigation.

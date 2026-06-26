@@ -10,13 +10,13 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="table[contains(concat(' ', normalize-space(@class), ' '), ' ou-snippets ')][contains(concat(' ', normalize-space(@class), ' '), ' photo-carousel ')]">
+  <xsl:template match="table[contains(concat(' ', normalize-space(@class), ' '), ' photo-carousel ')]">
     <xsl:variable name="label" select="normalize-space(tbody/tr/td[contains(concat(' ', normalize-space(@class), ' '), ' carousel-label ')][1])" />
     <xsl:variable name="slides" select="tbody/tr[contains(concat(' ', normalize-space(@class), ' '), ' snippet-row ')][td[contains(concat(' ', normalize-space(@class), ' '), ' carousel-image ')]//img]" />
 
     <xsl:choose>
       <xsl:when test="count($slides) &gt; 0">
-        <section class="uwg-c-photo-carousel" data-uwg-photo-carousel="" role="region">
+        <section class="uwg-c-photo-carousel" data-uwg-photo-carousel="" aria-roledescription="carousel">
           <xsl:attribute name="aria-label">
             <xsl:choose>
               <xsl:when test="$label != ''">
@@ -48,6 +48,9 @@
                       <xsl:if test="not($image/@alt)">
                         <xsl:attribute name="alt"></xsl:attribute>
                       </xsl:if>
+                      <xsl:if test="position() &gt; 1 and not($image/@loading)">
+                        <xsl:attribute name="loading">lazy</xsl:attribute>
+                      </xsl:if>
                       <xsl:attribute name="class">
                         <xsl:text>uwg-c-photo-carousel__image</xsl:text>
                         <xsl:if test="normalize-space($image/@class) != ''">
@@ -59,7 +62,7 @@
 
                     <xsl:if test="normalize-space($caption) != ''">
                       <figcaption class="uwg-c-photo-carousel__caption">
-                        <xsl:copy-of select="$caption/node()" />
+                        <xsl:apply-templates select="$caption/node()" />
                       </figcaption>
                     </xsl:if>
                   </figure>
@@ -69,19 +72,21 @@
           </div>
 
           <div class="uwg-c-photo-carousel__controls">
-            <button type="button" class="uwg-c-photo-carousel__button" data-uwg-photo-carousel-prev="" aria-label="Show previous slide">
+            <button class="uwg-c-photo-carousel__button" type="button" data-uwg-photo-carousel-prev="">
               <span aria-hidden="true">&lt;</span>
+              <span class="uwg-c-photo-carousel__sr-only">Previous slide</span>
             </button>
-            <p class="uwg-c-photo-carousel__status" data-uwg-photo-carousel-status="" aria-live="polite">
+            <p class="uwg-c-photo-carousel__status" data-uwg-photo-carousel-status="" aria-live="polite" aria-atomic="true">
               <xsl:text>Slide 1 of </xsl:text>
               <xsl:value-of select="count($slides)" />
             </p>
-            <button type="button" class="uwg-c-photo-carousel__button" data-uwg-photo-carousel-next="" aria-label="Show next slide">
+            <button class="uwg-c-photo-carousel__button" type="button" data-uwg-photo-carousel-next="">
               <span aria-hidden="true">&gt;</span>
+              <span class="uwg-c-photo-carousel__sr-only">Next slide</span>
             </button>
           </div>
 
-          <div class="uwg-c-photo-carousel__dots" aria-label="Choose slide">
+          <div class="uwg-c-photo-carousel__dots" role="group" aria-label="Choose slide">
             <xsl:for-each select="$slides">
               <button type="button" data-uwg-photo-carousel-dot="">
                 <xsl:attribute name="aria-label">
@@ -91,10 +96,6 @@
                 <xsl:if test="position() = 1">
                   <xsl:attribute name="aria-current">true</xsl:attribute>
                 </xsl:if>
-                <span class="uwg-c-photo-carousel__sr-only">
-                  <xsl:text>Slide </xsl:text>
-                  <xsl:value-of select="position()" />
-                </span>
               </button>
             </xsl:for-each>
           </div>
