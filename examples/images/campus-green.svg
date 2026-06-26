@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Campus green illustration</title>
+  <rect width="1200" height="675" fill="#f4f7fb" />
+  <rect y="430" width="1200" height="245" fill="#5e8c61" />
+  <path d="M0 452 C170 382 305 395 430 443 C560 493 706 484 858 430 C1012 375 1125 394 1200 425 L1200 675 L0 675 Z" fill="#7fad78" />
+  <rect x="126" y="244" width="300" height="170" fill="#ffffff" stroke="#6b7280" stroke-width="8" />
+  <rect x="164" y="286" width="54" height="64" fill="#b8d9ef" />
+  <rect x="248" y="286" width="54" height="64" fill="#b8d9ef" />
+  <rect x="332" y="286" width="54" height="64" fill="#b8d9ef" />
+  <rect x="690" y="205" width="360" height="215" fill="#fff8ed" stroke="#6b7280" stroke-width="8" />
+  <polygon points="650,205 870,110 1090,205" fill="#b84a3a" />
+  <rect x="745" y="268" width="70" height="92" fill="#b8d9ef" />
+  <rect x="860" y="268" width="70" height="92" fill="#b8d9ef" />
+  <rect x="970" y="268" width="46" height="152" fill="#746357" />
+  <circle cx="230" cy="168" r="64" fill="#f0c85a" />
+  <g fill="#2f3d4a">
+    <circle cx="506" cy="423" r="16" />
+    <path d="M493 440 L519 440 L532 519 L511 519 L506 474 L500 519 L480 519 Z" />
+    <circle cx="580" cy="406" r="16" />
+    <path d="M567 423 L593 423 L606 505 L584 505 L579 459 L573 505 L553 505 Z" />
+    <circle cx="635" cy="428" r="15" />
+    <path d="M623 444 L647 444 L660 518 L640 518 L635 476 L629 518 L610 518 Z" />
+  </g>
+</svg>
+

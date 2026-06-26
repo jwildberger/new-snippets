@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Student center illustration</title>
+  <rect width="1200" height="675" fill="#f7f4ee" />
+  <rect y="470" width="1200" height="205" fill="#d9d2c4" />
+  <rect x="160" y="170" width="880" height="310" rx="6" fill="#ffffff" stroke="#52606d" stroke-width="10" />
+  <rect x="214" y="226" width="190" height="118" fill="#91bed6" />
+  <rect x="438" y="226" width="190" height="118" fill="#91bed6" />
+  <rect x="796" y="226" width="190" height="118" fill="#91bed6" />
+  <rect x="650" y="328" width="112" height="152" fill="#57493f" />
+  <rect x="146" y="142" width="908" height="42" fill="#b84a3a" />
+  <path d="M155 470 L1045 470 L1120 675 L80 675 Z" fill="#c5bdb0" />
+  <g fill="#2f3d4a">
+    <circle cx="302" cy="478" r="18" />
+    <path d="M286 496 L318 496 L334 596 L308 596 L302 540 L294 596 L270 596 Z" />
+    <circle cx="396" cy="455" r="18" />
+    <path d="M380 473 L412 473 L428 573 L402 573 L396 518 L388 573 L364 573 Z" />
+    <circle cx="892" cy="478" r="18" />
+    <path d="M876 496 L908 496 L924 596 L898 596 L892 540 L884 596 L860 596 Z" />
+  </g>
+  <path d="M472 513 C535 486 597 486 660 513" fill="none" stroke="#6e8f72" stroke-width="18" stroke-linecap="round" />
+  <circle cx="566" cy="88" r="54" fill="#f0c85a" />
+</svg>
+

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Library entrance illustration</title>
+  <rect width="1200" height="675" fill="#eef4f8" />
+  <rect x="160" y="130" width="880" height="390" fill="#f8f5ef" stroke="#5f6874" stroke-width="10" />
+  <rect x="238" y="218" width="118" height="178" fill="#9ec4db" stroke="#5f6874" stroke-width="6" />
+  <rect x="420" y="218" width="118" height="178" fill="#9ec4db" stroke="#5f6874" stroke-width="6" />
+  <rect x="662" y="218" width="118" height="178" fill="#9ec4db" stroke="#5f6874" stroke-width="6" />
+  <rect x="844" y="218" width="118" height="178" fill="#9ec4db" stroke="#5f6874" stroke-width="6" />
+  <rect x="520" y="292" width="160" height="228" fill="#56483f" />
+  <rect x="150" y="520" width="900" height="34" fill="#c8cbd0" />
+  <rect x="190" y="554" width="820" height="34" fill="#b5bbc2" />
+  <rect x="230" y="588" width="740" height="34" fill="#a8afb8" />
+  <rect x="270" y="622" width="660" height="34" fill="#9ca5af" />
+  <g fill="#b84a3a">
+    <rect x="216" y="126" width="62" height="210" />
+    <rect x="922" y="126" width="62" height="210" />
+  </g>
+  <g fill="#ffffff">
+    <rect x="231" y="150" width="32" height="86" />
+    <rect x="937" y="150" width="32" height="86" />
+  </g>
+  <circle cx="104" cy="98" r="58" fill="#f0c85a" />
+</svg>
+
