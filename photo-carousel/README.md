@@ -19,4 +19,4 @@ This snippet lets editors build an accessible image carousel from a hidden autho
 
 The output includes previous/next buttons, screen-reader button labels, live slide status text, lazy loading after the first slide, and dot buttons for direct slide navigation.
 
-On desktop, the active image is shown large with subtle cropped previous/next previews on either side. On tablet and mobile widths, only the active image is displayed.
+On desktop, the active image is shown large with smaller, subtle cropped previous/next previews on either side. The previews are sized against the image area rather than the image plus caption. On tablet and mobile widths, only the active image is displayed.
