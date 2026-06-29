@@ -2,7 +2,6 @@
   --uwg-c-photo-carousel-border: #d6d6d6;
   --uwg-c-photo-carousel-text: #1f1f1f;
   --uwg-c-photo-carousel-muted: #666;
-  --uwg-c-photo-carousel-bg: #fff;
   --uwg-c-photo-carousel-control-bg: #fff;
   --uwg-c-photo-carousel-image-bg: #fff;
   --uwg-c-photo-carousel-image-height: clamp(20rem, 50vw, 38rem);
@@ -21,10 +20,7 @@
 }
 
 .uwg-c-photo-carousel__viewport {
-  overflow: hidden;
-  border: 1px solid var(--uwg-c-photo-carousel-border);
-  border-radius: 0.75rem;
-  background: var(--uwg-c-photo-carousel-bg);
+  overflow: visible;
 }
 
 .uwg-c-photo-carousel__slides {
@@ -72,12 +68,19 @@
   margin: 0;
 }
 
+.uwg-c-photo-carousel__slide:not([data-uwg-photo-carousel-position]) .uwg-c-photo-carousel__figure,
+.uwg-c-photo-carousel__slide[data-uwg-photo-carousel-position="current"] .uwg-c-photo-carousel__figure {
+  overflow: hidden;
+  border: 1px solid var(--uwg-c-photo-carousel-border);
+  border-radius: 0.45rem;
+  background: var(--uwg-c-photo-carousel-image-bg);
+}
+
 .uwg-c-photo-carousel__image {
   display: block;
   width: 100%;
   height: var(--uwg-c-photo-carousel-image-height);
   object-fit: contain;
-  border-radius: 0.45rem;
   background: var(--uwg-c-photo-carousel-image-bg);
 }
 
